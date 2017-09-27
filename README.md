@@ -1,10 +1,10 @@
 # web-accessible-resources-webpack-plugin
 
-This is a webpack plugin that automatically populates the `web_accessible_resources` clause in your `manifest.json`.
-It lists all the images (or files of your choosing) required by your JavaScript files.
+This plugin adds filenames in your webpack to the `web_accessible_resources` clause in your `manifest.json`.
+You don't need to maintain a list of images manually anymore.
 
-It's handy when writing chrome extensions, especially when paired with the
-[manifest loader](https://github.com/bronson/manifest-webpack-loader).
+This is handy when writing chrome extensions, especially when paired with the
+[manifest package loader](https://github.com/bronson/manifest-package-loader).
 
 ## Install
 
@@ -15,7 +15,7 @@ It's handy when writing chrome extensions, especially when paired with the
 ```js
 // webpack.config.js
 
-const WebAccessibleResourcesPlugin = require('./src/web-accessible-resources-webpack-plugin')
+const WebAccessibleResourcesPlugin = require('web-accessible-resources-webpack-plugin')
 
 module.exports = {
   ...
@@ -34,9 +34,24 @@ For more flexibility, you can specify a function instead of the regular expressi
   new WebAccessibleResourcesPlugin( (name) => ['a.jpg', 'b.jpg'].includes(name) )
 ```
 
+## Output
+
+Example output in your `manifest.json`:
+
+```js
+{
+  ...
+  "web_accessible_resources": [
+    "header.png",
+    "landscape.jpg",
+    "icon.png"
+  ]
+}
+```
+
 ## Contributing
 
-Please file an issue or pull request on [GitHub](https://github.com/bronson/web-accessible-resources-webpack-plugin/issues).
+Please file an issue on [GitHub](https://github.com/bronson/web-accessible-resources-webpack-plugin/issues).
 
 ## License
 

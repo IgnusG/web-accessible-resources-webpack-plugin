@@ -6,5 +6,11 @@
   "repository": "https://github.com/bronson/web-accessible-resources-webpack-plugin",
   "author": "Scott Bronson",
   "license": "MIT",
-  "keywords": ["webpack", "webpack-plugin", "manifest.json", "chrome extension"]
+  "keywords": [
+    "webpack",
+    "webpack-plugin",
+    "manifest.json",
+    "chrome extension"
+  ],
+  "dependencies": {}
 }
