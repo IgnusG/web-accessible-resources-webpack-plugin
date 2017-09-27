@@ -1,0 +1,10 @@
+{
+  "name": "web-accessible-resources-webpack-plugin",
+  "version": "0.9.0",
+  "description": "A webpack plugin to populate the web_accessible_resources clause in manifest.json",
+  "main": "index.js",
+  "repository": "https://github.com/bronson/web-accessible-resources-webpack-plugin",
+  "author": "Scott Bronson",
+  "license": "MIT",
+  "keywords": ["webpack", "webpack-plugin", "manifest.json", "chrome extension"]
+}
