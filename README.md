@@ -1,6 +1,7 @@
 # web-accessible-resources-webpack-plugin
 
-This is a webpack plugin that automatically populates the `web_accessible_resources` clause in your `manifest.json`
+This is a webpack plugin that automatically populates the `web_accessible_resources` clause in your `manifest.json`.
+It lists all the images (or files of your choosing) required by your JavaScript files.
 
 It's handy when writing chrome extensions, especially when paired with the
 [manifest loader](https://github.com/bronson/manifest-webpack-loader).
@@ -24,8 +25,14 @@ module.exports = {
 }
 ```
 
-Now, any image required by your source files are will also be mentioned in
+Now images required by your source files will be mentioned in
 [web\_accessible\_resources](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/web_accessible_resources).
+
+For more flexibility, you can specify a function instead of the regular expression:
+
+```js
+  new WebAccessibleResourcesPlugin( (name) => ['a.jpg', 'b.jpg'].includes(name) )
+```
 
 ## Contributing
 
