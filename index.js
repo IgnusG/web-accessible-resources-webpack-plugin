@@ -13,7 +13,7 @@ function WebAccessibleResourcesPlugin (options) {
 
 WebAccessibleResourcesPlugin.prototype.apply = function (compiler) {
   const matcher = this.matcher
-  compiler.plugin('emit', function (compilation, done) {
+  compiler.hooks.emit.tapAsync('WebAccessibleResourcesPlugin', function (compilation, done) {
     let images = Object.keys(compilation.assets).filter(matcher)
     let manifest = compilation.assets['manifest.json']
     if (manifest) {
