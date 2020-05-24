@@ -1,10 +1,13 @@
 {
-  "name": "web-accessible-resources-webpack-plugin",
-  "version": "1.0.0",
+  "name": "@ignsg/web-accessible-resources-webpack-plugin",
+  "version": "1.0.1",
   "description": "A webpack plugin to populate the web_accessible_resources clause in manifest.json",
   "main": "index.js",
-  "repository": "https://github.com/bronson/web-accessible-resources-webpack-plugin",
+  "repository": "https://github.com/ignusg/web-accessible-resources-webpack-plugin",
   "author": "Scott Bronson",
+  "contributors": [
+    "IgnusG (https://github.com/ignusg)"
+  ],
   "license": "MIT",
   "keywords": [
     "webpack",
